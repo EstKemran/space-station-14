@@ -37,6 +37,16 @@
   group: market
 
 - type: cargoProduct
+  id: CrateVendingMachineRestockAutoDrobe
+  icon:
+    sprite: Objects/Specific/Service/vending_machine_restock.rsi
+    state: base
+  product: CrateVendingMachineRestockAutoDrobeFilled
+  cost: 1300 #SS220-tohoUpdate
+  category: cargoproduct-category-name-service
+  group: marke
+  
+- type: cargoProduct
   id: CrateVendingMachineRestockDinnerware
   icon:
     sprite: Objects/Specific/Service/vending_machine_restock.rsi
