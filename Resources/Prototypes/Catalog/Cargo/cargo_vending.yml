@@ -42,7 +42,7 @@
     sprite: Objects/Specific/Service/vending_machine_restock.rsi
     state: base
   product: CrateVendingMachineRestockAutoDrobeFilled
-  cost: 1300 #SS220-tohoUpdate
+  cost: 1300 #SS220-toho Update
   category: cargoproduct-category-name-service
   group: marke
   
