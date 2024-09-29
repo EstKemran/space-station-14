@@ -21,8 +21,8 @@
       path: /Audio/Weapons/Guns/Gunshots/flaregun.ogg
   - type: BallisticAmmoProvider
     whitelist:
-      tags:
-        - ShellShotgun
+      components: #SS220-FIX FlareGun fire shots
+        - ShellShotgunFlare #SS220-FIX FlareGun fire shots
     proto: ShellShotgunFlare
     capacity: 1
     soundInsert:
