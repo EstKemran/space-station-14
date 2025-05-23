@@ -2,9 +2,8 @@
 
 #Base
 - type: entity
-  abstract: true
   parent: BaseItem
-  id: KRSPowerCell
+  id: PowerCellBlaster
   components:
   - type: Item
   - type: Battery
@@ -13,7 +12,7 @@
     startingCharge: 800
   - type: PowerCell
   - type: Sprite
-    sprite: SS220/Objects/Weapons/Guns/Ammunition/Magazine/krs_magblaster.rsi
+    sprite: SS220/Objects/Weapons/Guns/Ammunition/Magazine/blaster_powercells.rsi
     layers:
     - map: [ "enum.PowerCellVisualLayers.Base" ]
       state: base
@@ -35,33 +34,21 @@
           Quantity: 5
   - type: Tag
     tags:
-      - KRSPowerCell
+      - PowerCellBlaster
   - type: Appearance
   - type: PowerCellVisuals
   - type: Riggable
   - type: AmmoCounter
   - type: ProjectileBatteryAmmoProvider
-    proto: BulletBlaster
-    fireCost: 32
-
-- type: entity
-  parent: KRSPowerCell
-  id: BlasterPowerCellAlt
-  name: blaster power cell
-  description: It contains a lot more pain than you ever dreamed of.
-  suffix:  Laser
-  components:
-  - type: ProjectileBatteryAmmoProvider
     proto: BulletBlasterAlt
     fireCost: 40
 
 - type: entity
-  id: BlasterPowerCellAltPrinted
+  parent: PowerCellBlaster
+  id: BlasterPowerCellPrinted
   suffix: Empty
-  parent: BlasterPowerCellAlt
   components:
   - type: Sprite
-    sprite: SS220/Objects/Weapons/Guns/Ammunition/Magazine/krs_magblaster.rsi
     layers:
     - map: [ "enum.PowerCellVisualLayers.Base" ]
       state: base
@@ -74,34 +61,12 @@
     startingCharge: 0
 
 - type: entity
-  parent: KRSPowerCell
-  id: BlasterPowerCellDisabler
-  name: blaster power cell
-  description: It contains a lot more pain than you ever dreamed of.
-  suffix: Disabler
-  components:
-  - type: Sprite
-    sprite: SS220/Objects/Weapons/Guns/Ammunition/Magazine/krs_magblaster_disabler.rsi
-    layers:
-    - map: [ "enum.PowerCellVisualLayers.Base" ]
-      state: base
-    - map: [ "enum.PowerCellVisualLayers.Unshaded" ]
-      state: o2
-      shader: unshaded
-  - type: ProjectileBatteryAmmoProvider
-    proto: BulletDisablerSmg
-    fireCost: 24
-
-- type: entity
-  parent: KRSPowerCell
-  id: BlasterPowerCellPulse
-  name: blaster power cell
+  parent: PowerCellBlaster
+  id: BlasterPowerCellHighCapacity
+  name: high-capacity blaster power cell
   description: It contains a lot more pain than you ever dreamed of.
   components:
   - type: Battery
     pricePerJoule: 0.15
     maxCharge: 1200
     startingCharge: 1200
-  - type: ProjectileBatteryAmmoProvider
-    proto: BulletBlasterPulse
-    fireCost: 48

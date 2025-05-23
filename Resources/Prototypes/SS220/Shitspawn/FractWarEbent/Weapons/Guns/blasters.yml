@@ -1,46 +1,10 @@
 - type: entity
   id: WeaponBlaster
-  parent: BaseWeaponPowerCell
+  parent: BaseBlaster
   name: бластерная энерговинтовка
   description: Штурмовая модификация старой надежной винтовки. Режим оглушения был заменен на автоматический режим стрельбы. Наслаждайтесь.
   suffix: Ebent, Shitspawn, FractWar
   components:
-  - type: Sprite
-    sprite: SS220/Shitspawn/FractWarEbent/Objects/Weapons/Guns/Battery/ert_blaster.rsi
-    layers:
-    - state: base
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-5
-      map: ["enum.GunVisualLayers.Mag"]
-    - state: mag-unshaded-5
-      map: ["enum.GunVisualLayers.MagUnshaded"]
-      shader: unshaded
-  - type: Clothing
-    sprite: SS220/Shitspawn/FractWarEbent/Objects/Weapons/Guns/Battery/ert_blaster.rsi
-    quickEquip: false
-    slots:
-    - Back
-    - suitStorage
-  - type: MagazineVisuals
-    magState: mag
-    steps: 6
-    zeroVisible: true
-  - type: Wieldable
-  - type: GunWieldBonus
-    minAngle: -2
-    maxAngle: -13
-  - type: Gun
-    fireRate: 6.5
-    minAngle: 17
-    maxAngle: 29
-    angleIncrease: 3
-    angleDecay: 16
-    selectedMode: FullAuto
-    availableModes:
-    - SemiAuto
-    - FullAuto
-    soundGunshot:
-      path: /Audio/SS220/Weapons/Guns/Gunshots/blaster_nt.ogg
   - type: ItemSlots
     slots:
       gun_magazine:
@@ -52,7 +16,11 @@
         whitelist:
           tags:
             - BlasterPowerCell
-  - type: ContainerContainer
-    containers:
-      cell_slot: !type:ContainerSlot
-      gun_magazine: !type:ContainerSlot
+            - PowerCellBlaster
+  - type: GunWieldBonus
+    minAngle: -2
+    maxAngle: -13
+  - type: Gun
+  - type: MagazineAmmoProvider
+    proto: BulletBlaster
+    fireCost: 32

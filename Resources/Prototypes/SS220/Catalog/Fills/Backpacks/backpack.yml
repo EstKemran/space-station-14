@@ -149,7 +149,7 @@
     contents:
       - id: BoxSurvivalSecurity
       - id: WeaponBlasterKRV
-      - id: BlasterPowerCellPulse
+      - id: BlasterPowerCellHighCapacity
         amount: 3
       - id: BlasterPowerCellDisabler
         amount: 2

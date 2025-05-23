@@ -48,7 +48,7 @@
 
 - type: entity
   id: WeaponBlasterKRS
-  parent: WeaponBlaster
+  parent: BaseBlaster
   name: krs
   description: An old reliable blaster rifle. There is only a semi-automatic type of shooting.
   suffix: Blaster
@@ -61,21 +61,19 @@
     - SemiAuto
     soundGunshot:
       path: /Audio/SS220/Weapons/Guns/Gunshots/blaster_nt.ogg
-  - type: ItemSlots
-    slots:
-      gun_magazine:
-        name: Magazine
-        startingItem: BlasterPowerCellAlt
-        insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
-        ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
-        whitelist:
-          tags:
-            - KRSPowerCell
+  - type: BatteryWeaponFireModes
+    fireModes:
+    - proto: BulletBlasterAlt
+      name: firemode-name-laser-alt
+      fireCost: 40
+    - proto: BulletDisablerSmg
+      name: firemode-name-disabler-alt
+      fireCost: 24
 
 - type: entity
   id: WeaponBlasterKRV
-  parent: WeaponBlaster
-  name: KRV
+  parent: BaseBlaster
+  name: krv
   description: An advanced blaster rifle. Used by special operatives.
   suffix: Blaster
   components:
@@ -84,13 +82,17 @@
   - type: ItemSlots
     slots:
       gun_magazine:
-        name: Magazine
-        startingItem: BlasterPowerCellPulse
-        insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
-        ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
-        whitelist:
-          tags:
-            - KRSPowerCell
+        startingItem: BlasterPowerCellHighCapacity
+  - type: BatteryWeaponFireModes
+    fireModes:
+    - proto: BulletBlasterPulse
+      name: firemode-name-enhanced
+      fireCost: 48
+    - proto: BulletDisablerSmg
+      name: firemode-name-disabler-alt
+      fireCost: 30
+      gunModifiers:
+        fireRate: 1.5
 
 # Новые прототипы пишите выше
 # Death Squad
