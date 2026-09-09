@@ -20,7 +20,7 @@
     requirement:
       !type:RoleTimeRequirement
       role: JobWarden
-      time: 518400 # 144h
+      time: 144h
   sponsorTierLoadoutEffects:
   - !type:GroupLoadoutEffect
     proto: SeniorDevTeamTier
